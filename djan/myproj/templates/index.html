@@ -1,0 +1,22 @@
+{% extends 'basa.html' %}
+{% block index %}
+<!-- <h1>{{ person.name }}</h1>
+<p>Возраст: {{ person.age }}</p>
+
+<ul>
+    {% for lan in people %}
+    <li>{{ lan.name }} = {{ lan.age }}</li>
+    {%endfor%}
+</ul> -->
+
+<hr>
+
+<h3>Добавить нового человека</h3>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+
+{% endblock index%}
+

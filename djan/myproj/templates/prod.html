@@ -1,0 +1,17 @@
+{% extends 'basa.html' %}
+{% block prod %}
+<h1>Интернет магазин</h1>
+
+{% for cat in category %}
+    <p>
+        <a href="/prod/{{ cat.id }}/"><b>{{ cat.title }}</b></a> 
+    </p>
+{% endfor %}
+
+<hr>
+
+{% for p in product %}
+    <p>{{ p.name }} | {{ p.sale }} руб. | {{ p.material }}</p>
+{% endfor %}
+
+{% endblock prod %}
